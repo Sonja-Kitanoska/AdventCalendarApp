@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	margin: 0;
+	height: 100vh;
+	background-image: url("./3d-christmas-winter-landscape.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+h1 {
+	color: #c30f16;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	font-size: 40px;
+}
+
+.container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.calendar {
+	border: 5px solid #c30f16;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 15px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	background-color: #fff;
+	padding: 20px;
+}
+
+.day {
+	aspect-ratio: 1;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 18px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.day.opened {
+	background-color: #dcedc8;
+	color: #fff;
+	font-weight: bold;
+}
+
+.day:hover {
+	transform: scale(1.1);
+}
+
+#audio-player {
+	display: none;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(0, 0);
+	}
+	10% {
+		transform: translate(-5px, -5px);
+	}
+	20% {
+		transform: translate(5px, 5px);
+	}
+	30% {
+		transform: translate(-5px, 5px);
+	}
+	40% {
+		transform: translate(5px, -5px);
+	}
+	50% {
+		transform: translate(-5px, -5px);
+	}
+	60% {
+		transform: translate(5px, 5px);
+	}
+	70% {
+		transform: translate(-5px, 5px);
+	}
+	80% {
+		transform: translate(5px, -5px);
+	}
+	90% {
+		transform: translate(-5px, -5px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.shake {
+	animation: shake 0.5s ease;
+}
+
+#demo-mode {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 1rem;
+	background-color: #c30f16;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+#demo-mode:hover {
+	background-color: #c30f16;
+}
+
+.message {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
